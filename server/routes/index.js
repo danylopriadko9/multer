@@ -1,11 +1,7 @@
+const uploadRouter = require('./uploadRouter');
+
 const router = require('express').Router();
 
-router.get('/', (req, res) => {
-  try {
-    return res.status(200).json('work');
-  } catch (error) {
-    console.log(error);
-  }
-});
+router.use('/upload', uploadRouter);
 
 module.exports = router;
